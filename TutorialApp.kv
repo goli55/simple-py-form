@@ -2,12 +2,6 @@
 
 <ScatterTextWidget>:
     orientation: 'vertical'
-    canvas:
-        Color:
-            rgba: 0,0,1,1
-        Rectangle:
-            pos: self.pos
-            size: self.size
     TextInput: 
         id: default_textinput
         font_size: 130
@@ -17,11 +11,28 @@
         on_text: root.change_label_color()
     FloatLayout:
         Scatter:
+            center: self.parent.center
+            size_hint: None,None
+            size: my_label.size
+            canvas.after:
+                Color:
+                    rgba: 1,0,0,0.5
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                
             Label:
                 id: my_label
                 text: default_textinput.text
-                font_size: 130
+                font_size: 150
                 color: root.text_color
+                size: self.texture_size
+                canvas:
+                    Color:
+                        rgba: 0,1,0,0.5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
     BoxLayout:
         orientation: 'horizontal'
         size_hint_y: None
