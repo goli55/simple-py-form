@@ -14,10 +14,6 @@ Builder.load_string('''
         keep_ratio: False
  
     Image:
-        source: 'img/img2.jpg'
-        allow_stretch: True
-        keep_ratio: False
-    Image:
         source: 'img/img1-1.png'
         allow_stretch: True
         keep_ratio: False
