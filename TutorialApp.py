@@ -21,14 +21,7 @@ class ScatterTextWidget(BoxLayout):
     def __init__(self, **kwargs):
         super(ScatterTextWidget,self).__init__(**kwargs)
 
-        with self.canvas.after:
-            Color(0,1,0,1)
-            Rectangle(pos=(0,100),size=(300,100))
-            Ellipse(pos=(0,400),size=(300,100))
-            Line(points=[0,0,500,600,400,400],
-                close=True,
-                width=3)
-
+     
 
 
     def change_label_color(self,*args):
